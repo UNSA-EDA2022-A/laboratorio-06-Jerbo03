@@ -24,7 +24,7 @@ public class Exercise2 {
     }
     
     public <T extends Comparable<T>> boolean bstIguales(Node<T> a1, Node<T> a2){
-        if (a1.data.compareTo(a2.data) != 0) return false; // El valor de los nodos debe ser igual
-        return bstIguales(a1.left, a2.left) && bstIguales(a1.right, a2.right); // El de sus hijos tambien
+        if (a1 == null || a2 == null) return (a1 == null && a2 == null)
+        return (a1.data.compareTo(a2.data) != 0) && bstIguales(a1.left, a2.left) && bstIguales(a1.right, a2.right);
     }
 }
