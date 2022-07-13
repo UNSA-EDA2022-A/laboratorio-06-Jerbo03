@@ -23,10 +23,10 @@ public class Exercise1 {
     public <T extends Comparable<T>> boolean bstSimilares(BST<T> a1, BST<T> a2){
         if (a1.isEmpty() || a1.isEmpty()) return a1.isEmpty() && a1.isEmpty(); // Si alguna de las raices es null, ambas deben serlo para tener un bst similar
         // Si ninguna raiz es null
-        BST<T> a1L = a1; a1L.root = a1L.left;   // Crear el sub arbol 1 izquierdo
-        BST<T> a1R = a1; a1R.root = a1R.right;  // Crear el sub arbol 1 derecho
-        BST<T> a2L = a2; a2L.root = a2L.left;   // Crear el sub arbol 2 izquierdo
-        BST<T> a2R = a2; a2R.root = a2R.right;  // Crear el sub arbol 2 derecho
+        BST<T> a1L = a1; a1L.root = a1Lroot.left;   // Crear el sub arbol 1 izquierdo
+        BST<T> a1R = a1; a1R.root = a1Rroot.right;  // Crear el sub arbol 1 derecho
+        BST<T> a2L = a2; a2L.root = a2Lroot.left;   // Crear el sub arbol 2 izquierdo
+        BST<T> a2R = a2; a2R.root = a2Rroot.right;  // Crear el sub arbol 2 derecho
         return bstSimilares(a1L, a2L) && bstSimilares(a1R, a2R); // Y comprobar que los subarboles tambien sean similares
     }
     
