@@ -19,7 +19,7 @@ public class Exercise3 {
 
 
     public <T extends Comparable<T>> boolean bstEstrictamenteBinario(BST<T> a){
-        if (a.isEmpty) return false;
+        if (a.isEmpty()) return false;
         return bstEstrictamenteBinario(a.root.right, a.root.left);
     }
     
