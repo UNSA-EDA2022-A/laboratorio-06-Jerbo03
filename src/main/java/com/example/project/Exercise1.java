@@ -27,7 +27,7 @@ public class Exercise1 {
     public <T extends Comparable<T>> boolean bstSimilares(Node<T> a1, Node<T> a2){
         if (a1 == null || a2 == null) return a1 == null && a2 == null; // Si alguna de las raices es null, ambas deben serlo para tener un bst similar
         // Si ninguna raiz es null
-        return bstSimilares(a1.left, a2.left) && bstSimilares(a1.left, a2.left); // Comprobar que los subarboles tambien sean similares
+        return bstSimilares(a1.left, a2.left) && bstSimilares(a1.right, a2.right); // Comprobar que los subarboles tambien sean similares
     }
     
 }
