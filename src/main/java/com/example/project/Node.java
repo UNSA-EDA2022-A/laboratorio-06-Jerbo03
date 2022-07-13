@@ -5,6 +5,8 @@ class Node<E> {
     public Node<E> left;
     public Node<E> right;
     public int height;
+    public boolean color; // 0 - negro; 1 - rojo
+    public Node<E> parent;
 
     // Constructores
     public Node(E data, Node<E> left, Node<E> right) {
@@ -12,6 +14,8 @@ class Node<E> {
         this.left = left;
         this.right = right;
         this.height = 0;
+        this.color = false;
+        this.parent = null;
     }
 
     public Node(E data) {
