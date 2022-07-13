@@ -19,7 +19,13 @@ public class Exercise3 {
 
 
     public <T extends Comparable<T>> boolean bstEstrictamenteBinario(BST<T> a){
-
-        return false;
+        if (a.isEmpty) return false;
+        return bstEstrictamenteBinario(a.root.right, a.root.left);
+    }
+    
+    public <T extends Comparable<T>> boolean bstEstrictamenteBinario(Node<T> r, Node<T> l){
+        if (a1 == null || a2 == null) // Si alguno de los hijos es null
+            return (a1 == null && a2 == null); // Solo sera estrictamente binario si ambos son hojas
+        return true; // Si ninguno es null, no hay problema
     }
 }
