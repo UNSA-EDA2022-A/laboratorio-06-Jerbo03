@@ -24,8 +24,8 @@ public class Exercise3 {
     }
     
     public <T extends Comparable<T>> boolean bstEstrictamenteBinario(Node<T> r, Node<T> l){
-        if (a1 == null || a2 == null) // Si alguno de los hijos es null
-            return (a1 == null && a2 == null); // Solo sera estrictamente binario si ambos son hojas
+        if (r == null || l == null) // Si alguno de los hijos es null
+            return (r == null && l == null); // Solo sera estrictamente binario si ambos son hojas
         return true; // Si ninguno es null, no hay problema
     }
 }
