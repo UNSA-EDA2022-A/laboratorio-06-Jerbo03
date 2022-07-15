@@ -18,10 +18,13 @@ public class Exercise2 {
         System.out.print(obj.bstIguales(tree1, tree2));
         
     }
-
-
+    
     public <T extends Comparable<T>> boolean bstIguales(BST<T> a1, BST<T> a2){
-
-        return false;
+        return bstIguales(a1.root, a2.root);
+    }
+    
+    public <T extends Comparable<T>> boolean bstIguales(Node<T> a1, Node<T> a2){
+        if (a1 == null || a2 == null) return (a1 == null && a2 == null); // Si son nulos, no se pueden verificar sus hijos (no tienen)
+        return (a1.data.compareTo(a2.data) == 0) && bstIguales(a1.left, a2.left) && bstIguales(a1.right, a2.right); // Comparar sus valores y el de sus hijos
     }
 }
